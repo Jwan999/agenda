@@ -28,11 +28,14 @@
         .slide-fade-enter-active {
             transition: all .3s ease;
         }
+
         .slide-fade-leave-active {
             transition: all .3s ease-out;
         }
+
         .slide-fade-enter, .slide-fade-leave-to
-            /* .slide-fade-leave-active below version 2.1.8 */ {
+            /* .slide-fade-leave-active below version 2.1.8 */
+        {
             transform: translateY(-30px);
             opacity: 0;
         }
@@ -53,7 +56,7 @@
             </div>
             <div class="flex w-full lg:flex-row flex-col mt-10">
                 <div class="flex flex-col lg:w-6/12 w-full">
-                    <div v-on:click="show = !show"
+                    <div @click="clicking('section1')"
                          class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
                             <?xml version="1.0" encoding="UTF-8"?>
@@ -61,9 +64,14 @@
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>Wireframe</title>
                                 <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle id="Oval" fill-opacity="0.2" v-bind:fill="color" cx="35" cy="35"
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section1') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
                                             r="35"></circle>
-                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7" v-bind:fill="color" cx="35.5"
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section1') ? '#fca000' : 'white'"
+                                            cx="35.5"
                                             cy="35.5" r="19.15"></circle>
                                 </g>
                             </svg>
@@ -74,175 +82,271 @@
                                 4:00 Opening Ceremony
                             </h1>
                             <transition name="slide-fade">
-                                <p v-if="show" class="text-xl text-gray-300 mt-3">
+                                <p v-if="active.includes('section1')" class="text-xl text-gray-300 mt-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expeditag
+                                </p>
+                            </transition>
+                        </div>
+                    </div>
+                    <div @click="clicking('section2')"
+                         class="flex flex-row mt-6 cursor-pointer">
+                        <div class="w-1/12">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 70 70" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Wireframe</title>
+                                <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section2') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section2') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="ml-3 w-11/12 px-2">
+                            <h1 class="text-2xl">
+                                4:05 IoTMaker speaker
+                            </h1>
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section2')" class="text-xl text-gray-300 mt-3">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
                                 </p>
                             </transition>
                         </div>
                     </div>
-                    <div class="flex flex-row mt-6">
+                    <div @click="clicking('section3')"
+                         class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
                             <?xml version="1.0" encoding="UTF-8"?>
-                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 100 100" version="1.1"
+                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 70 70" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>Wireframe</title>
                                 <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle id="Oval" fill-opacity="0.2" fill="#FFFFFF" cx="50" cy="50" r="50"></circle>
-                                    <circle id="Oval" stroke="#FFFFFF" fill="#FFFFFF" cx="50.5" cy="50.5"
-                                            r="27"></circle>
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section3') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section3') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
                                 </g>
                             </svg>
+
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:00 Opening Ceremony
+                                4:15 GIZ Speaker
                             </h1>
-                            <p class="text-xl text-gray-300 mt-3">
-                                <!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam-->
-                            </p>
-
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section3')" class="text-xl text-gray-300 mt-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                </p>
+                            </transition>
                         </div>
                     </div>
-                    <div class="flex flex-row mt-6">
+                    <div @click="clicking('section4')"
+                         class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
                             <?xml version="1.0" encoding="UTF-8"?>
-                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 100 100" version="1.1"
+                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 70 70" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>Wireframe</title>
                                 <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle id="Oval" fill-opacity="0.2" fill="#FFFFFF" cx="50" cy="50" r="50"></circle>
-                                    <circle id="Oval" stroke="#FFFFFF" fill="#FFFFFF" cx="50.5" cy="50.5"
-                                            r="27"></circle>
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section4') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section4') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
                                 </g>
                             </svg>
+
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:00 Opening Ceremony
+                                4:25 Fieldready Speaker
                             </h1>
-                            <p class="text-xl text-gray-300 mt-3">
-                                <!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam-->
-                            </p>
-
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section4')" class="text-xl text-gray-300 mt-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                </p>
+                            </transition>
                         </div>
                     </div>
-                    <div class="flex flex-row mt-6">
+                    <div @click="clicking('section5')"
+                         class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
                             <?xml version="1.0" encoding="UTF-8"?>
-                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 100 100" version="1.1"
+                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 70 70" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>Wireframe</title>
                                 <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle id="Oval" fill-opacity="0.2" fill="#FFFFFF" cx="50" cy="50" r="50"></circle>
-                                    <circle id="Oval" stroke="#FFFFFF" fill="#FFFFFF" cx="50.5" cy="50.5"
-                                            r="27"></circle>
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section5') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section5') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
                                 </g>
                             </svg>
+
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:00 Opening Ceremony
+                                4:30 What is IoTMaker
                             </h1>
-                            <p class="text-xl text-gray-300 mt-3">
-                                <!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam-->
-                            </p>
-
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section5')" class="text-xl text-gray-300 mt-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                </p>
+                            </transition>
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-col lg:w-6/12 w-full">
-                    <div class="flex flex-row mt-6">
+                    <div @click="clicking('section6')"
+                         class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
                             <?xml version="1.0" encoding="UTF-8"?>
-                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 100 100" version="1.1"
+                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 70 70" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>Wireframe</title>
                                 <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle id="Oval" fill-opacity="0.2" fill="#FFFFFF" cx="50" cy="50" r="50"></circle>
-                                    <circle id="Oval" stroke="#FFFFFF" fill="#FFFFFF" cx="50.5" cy="50.5"
-                                            r="27"></circle>
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section6') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section6') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
                                 </g>
                             </svg>
+
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:00 Opening Ceremony
+                                4:35 Tour & Catering
                             </h1>
-                            <p class="text-xl text-gray-300 mt-3">
-                                <!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam-->
-                            </p>
-
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section6')" class="text-xl text-gray-300 mt-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                </p>
+                            </transition>
                         </div>
                     </div>
-                    <div class="flex flex-row mt-6">
+                    <div @click="clicking('section7')"
+                         class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
                             <?xml version="1.0" encoding="UTF-8"?>
-                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 100 100" version="1.1"
+                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 70 70" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>Wireframe</title>
                                 <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle id="Oval" fill-opacity="0.2" fill="#FFFFFF" cx="50" cy="50" r="50"></circle>
-                                    <circle id="Oval" stroke="#FFFFFF" fill="#FFFFFF" cx="50.5" cy="50.5"
-                                            r="27"></circle>
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section7') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section7') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
                                 </g>
                             </svg>
+
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:00 Opening Ceremony
+                                5:00 IoTMaker future plan
                             </h1>
-                            <p class="text-xl text-gray-300 mt-3">
-                                <!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam-->
-                            </p>
-
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section7')" class="text-xl text-gray-300 mt-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                </p>
+                            </transition>
                         </div>
                     </div>
-                    <div class="flex flex-row mt-6">
+                    <div @click="clicking('section8')"
+                         class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
                             <?xml version="1.0" encoding="UTF-8"?>
-                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 100 100" version="1.1"
+                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 70 70" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>Wireframe</title>
                                 <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle id="Oval" fill-opacity="0.2" fill="#FFFFFF" cx="50" cy="50" r="50"></circle>
-                                    <circle id="Oval" stroke="#FFFFFF" fill="#FFFFFF" cx="50.5" cy="50.5"
-                                            r="27"></circle>
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section8') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section8') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
                                 </g>
                             </svg>
+
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:00 Opening Ceremony
+                                5:10 Open Discussion
                             </h1>
-                            <p class="text-xl text-gray-300 mt-3">
-                                <!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam-->
-                            </p>
-
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section8')" class="text-xl text-gray-300 mt-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                </p>
+                            </transition>
                         </div>
                     </div>
-                    <div class="flex flex-row mt-6">
+                    <div @click="clicking('section9')"
+                         class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
                             <?xml version="1.0" encoding="UTF-8"?>
-                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 100 100" version="1.1"
+                            <svg class="-mt-1" width="40px" height="40px" viewBox="0 0 70 70" version="1.1"
                                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>Wireframe</title>
                                 <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle id="Oval" fill-opacity="0.2" fill="#FFFFFF" cx="50" cy="50" r="50"></circle>
-                                    <circle id="Oval" stroke="#FFFFFF" fill="#FFFFFF" cx="50.5" cy="50.5"
-                                            r="27"></circle>
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section9') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section9') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
                                 </g>
                             </svg>
+
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:00 Opening Ceremony
+                                5:40 Closing Ceremony
                             </h1>
-                            <p class="text-xl text-gray-300 mt-3">
-                                <!--                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam-->
-                            </p>
-
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section9')" class="text-xl text-gray-300 mt-3">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                </p>
+                            </transition>
                         </div>
                     </div>
+
                 </div>
 
             </div>
@@ -258,16 +362,23 @@
     let vue = new Vue({
         el: '#app',
         data: {
-            show: false,
-            color: 'white',
+            active: [],
+            color: 'white'
         },
         methods: {
-            openDescription() {
-                this.show ? this.color = 'white' : this.color = '#FCA000'
+            clicking(section) {
+
+                if (this.active.includes(section)) {
+
+                    let index = this.active.indexOf(section)
+                    this.active.splice(index, 1)
+                    console.log(this.active)
+
+                } else {
+                    this.active.push(section)
+                }
+
             },
-            mounted(){
-                this.openDescription()
-            }
         }
     })
 </script>
