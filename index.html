@@ -83,7 +83,7 @@
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section1')" class="text-xl text-gray-300 mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expeditag
+                                    Welcoming you to our space.
                                 </p>
                             </transition>
                         </div>
@@ -111,11 +111,12 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:05 IoTMaker speaker
+                                4:05 IoT Maker Speaker
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section2')" class="text-xl text-gray-300 mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                    An IoT Maker representative will be talking about our team, our space, and our
+                                    activities.
                                 </p>
                             </transition>
                         </div>
@@ -147,7 +148,7 @@
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section3')" class="text-xl text-gray-300 mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                    A 5 minutes speech will be given by a GIZ representative.
                                 </p>
                             </transition>
                         </div>
@@ -175,11 +176,11 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:25 Fieldready Speaker
+                                4:25 Field Ready Speaker
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section4')" class="text-xl text-gray-300 mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                    A 5 minutes speech will be given by a Field ready representative.
                                 </p>
                             </transition>
                         </div>
@@ -207,11 +208,11 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                4:30 What is IoTMaker
+                                4:30 Get To Know IoT Maker
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section5')" class="text-xl text-gray-300 mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                    We’ll be presenting a short video of IoT Maker and the things we do.
                                 </p>
                             </transition>
                         </div>
@@ -245,7 +246,8 @@
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section6')" class="text-xl text-gray-300 mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                    You can walk around our space and get to see how our activities will be held and the
+                                    creative things we’ve made.
                                 </p>
                             </transition>
                         </div>
@@ -273,11 +275,44 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                5:00 IoTMaker future plan
+                                5:00 IoT Maker Future Plan
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section7')" class="text-xl text-gray-300 mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                    Opening our space is only the beginning, our ambition goes even further.
+                                </p>
+                            </transition>
+                        </div>
+                    </div>
+                    <div @click="clicking('section10')"
+                         class="flex flex-row mt-6 cursor-pointer">
+                        <div class="w-1/12">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg width="30px" height="30px" viewBox="0 0 70 70" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Wireframe</title>
+                                <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section10') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section10') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="ml-3 w-11/12 px-2">
+                            <h1 class="text-2xl">
+                                5:05 Our Startups
+                            </h1>
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section10')" class="text-xl text-gray-300 mt-3">
+                                    IoT kids, Asdikaee, and Hi Influencer will be giving speeches telling us about their
+                                    ideas and how passionate they are about them.
                                 </p>
                             </transition>
                         </div>
@@ -305,11 +340,11 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                5:10 Open Discussion
+                                5:15 Open Discussion
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section8')" class="text-xl text-gray-300 mt-3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                    A chance to get to know us and our space even more.
                                 </p>
                             </transition>
                         </div>
@@ -337,11 +372,12 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                5:40 Closing Ceremony
+                                5:45 Closing Ceremony
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section9')" class="text-xl text-gray-300 mt-3">
-                                    Lorem ipsum dolgor sit amet, consectetur adipisicing elit. Atque expedita laboriosam
+                                    Persevering the memory of this day with a photo before saying goodbye, and it won’t
+                                    be the last time we meet.
                                 </p>
                             </transition>
                         </div>
