@@ -88,6 +88,38 @@
                             </transition>
                         </div>
                     </div>
+                    <div @click="clicking('section5')"
+                         class="flex flex-row mt-6 cursor-pointer">
+                        <div class="w-1/12">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg width="30px" height="30px" viewBox="0 0 70 70" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Wireframe</title>
+                                <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section5') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section5') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="ml-3 w-11/12 px-2">
+                            <h1 class="text-2xl">
+                                11:05 Get To Know IoT Maker
+                            </h1>
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section5')" class="text-xl text-gray-300 mt-3 text-justify">
+                                    We’ll be presenting a short video of IoT Maker and the things we do.
+                                </p>
+                            </transition>
+                        </div>
+                    </div>
                     <div @click="clicking('section2')"
                          class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
@@ -111,7 +143,7 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                11:05 IoT Maker Speaker
+                                11:10 IoT Maker Speaker
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section2')" class="text-xl text-gray-300 mt-3 text-justify">
@@ -213,43 +245,12 @@
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section4')" class="text-xl text-gray-300 mt-3 text-justify">
-                                    A 5 minutes speech will be given by a Field ready representative.
+                                    A speech will be given by a Field ready representative.
                                 </p>
                             </transition>
                         </div>
                     </div>
-                    <div @click="clicking('section5')"
-                         class="flex flex-row mt-6 cursor-pointer">
-                        <div class="w-1/12">
-                            <?xml version="1.0" encoding="UTF-8"?>
-                            <svg width="30px" height="30px" viewBox="0 0 70 70" version="1.1"
-                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>Wireframe</title>
-                                <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle id="Oval" fill-opacity="0.2"
-                                            v-bind:fill="active.includes('section5') ? '#fca000' : 'white'"
-                                            cx="35"
-                                            cy="35"
-                                            r="35"></circle>
-                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
-                                            v-bind:fill="active.includes('section5') ? '#fca000' : 'white'"
-                                            cx="35.5"
-                                            cy="35.5" r="19.15"></circle>
-                                </g>
-                            </svg>
 
-                        </div>
-                        <div class="ml-3 w-11/12 px-2">
-                            <h1 class="text-2xl">
-                                11:35 Get To Know IoT Maker
-                            </h1>
-                            <transition name="slide-fade">
-                                <p v-if="active.includes('section5')" class="text-xl text-gray-300 mt-3 text-justify">
-                                    We’ll be presenting a short video of IoT Maker and the things we do.
-                                </p>
-                            </transition>
-                        </div>
-                    </div>
                 </div>
                 <div class="flex flex-col lg:w-6/12 w-full">
                     <div @click="clicking('section6')"
