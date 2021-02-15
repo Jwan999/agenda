@@ -1,0 +1,22 @@
+<html>
+    <body>
+
+        <svg width="983px" height="339px" viewBox="0 0 983 339" version="1.1" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <circle id="Oval" fill="#FCA000" cx="105" cy="270" r="60"></circle>
+                <circle id="Oval" fill="#269DDD" cx="606" cy="276" r="60"></circle>
+                <line x1="8.5" y1="7.59821429" x2="8.5" y2="140.401786" id="Line" stroke="#000000"
+                      stroke-width="14.4057623" stroke-linecap="square"></line>
+                <text id="IoT-Maker" font-family="AvantGardeITCbyBT-Book, AvantGarde Bk BT" font-size="240.096038"
+                      font-weight="normal" fill="#000000">
+                    <tspan x="-14.77491" y="335">IoT Maker</tspan>
+                </text>
+                <line x1="920" y1="68" x2="919.5" y2="140.401639" id="Line" stroke="#000000" stroke-width="14.4057623"
+                      stroke-linecap="square"></line>
+                <line x1="33" y1="68" x2="32.5" y2="140.401639" id="Line" stroke="#000000" stroke-width="14.4057623"
+                      stroke-linecap="square"></line>
+            </g>
+        </svg>
+    </body>
+</html>
