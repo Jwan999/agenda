@@ -180,7 +180,8 @@
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section11')" class="text-xl text-gray-300 mt-3 text-justify">
-                                    A speech will be given by Mrs. Stephanie Hochheim, Counselor for Economic Co-operation & Development at the german embassy in Baghdad.
+                                    A speech will be given by Mrs. Stephanie Hochheim, Counselor for Economic
+                                    Co-operation & Development at the german embassy in Baghdad.
                                 </p>
                             </transition>
                         </div>
@@ -222,6 +223,38 @@
 
                 </div>
                 <div class="flex flex-col lg:w-6/12 w-full">
+                    <div @click="clicking('section4')"
+                         class="flex flex-row mt-6 cursor-pointer">
+                        <div class="w-1/12">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg width="30px" height="30px" viewBox="0 0 70 70" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Wireframe</title>
+                                <g id="Wireframe" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <circle id="Oval" fill-opacity="0.2"
+                                            v-bind:fill="active.includes('section4') ? '#fca000' : 'white'"
+                                            cx="35"
+                                            cy="35"
+                                            r="35"></circle>
+                                    <circle id="Oval" stroke="#FCA000" stroke-width="0.7"
+                                            v-bind:fill="active.includes('section4') ? '#fca000' : 'white'"
+                                            cx="35.5"
+                                            cy="35.5" r="19.15"></circle>
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="ml-3 w-11/12 px-2">
+                            <h1 class="text-2xl">
+                                11:30 Maker Hive
+                            </h1>
+                            <transition name="slide-fade">
+                                <p v-if="active.includes('section4')" class="text-xl text-gray-300 mt-3 text-justify">
+                                    A short video about Maker Hive network and announcement. </p>
+                            </transition>
+                        </div>
+                    </div>
+
                     <div @click="clicking('section6')"
                          class="flex flex-row mt-6 cursor-pointer">
                         <div class="w-1/12">
@@ -245,7 +278,7 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                11:30 Tour & Catering
+                                11:35 Tour & Catering
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section6')" class="text-xl text-gray-300 mt-3 text-justify">
@@ -278,7 +311,7 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                12:00 IoT Maker Future Plan
+                                12:05 IoT Maker Future Plan
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section7')" class="text-xl text-gray-300 mt-3 text-justify">
@@ -310,7 +343,7 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                12:05 Our Startup Community
+                                12:10 Our Startup Community
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section10')" class="text-xl text-gray-300 mt-3 text-justify">
@@ -343,7 +376,7 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                12:15 Open Discussion
+                                12:20 Open Discussion
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section8')" class="text-xl text-gray-300 mt-3 text-justify">
@@ -375,7 +408,7 @@
                         </div>
                         <div class="ml-3 w-11/12 px-2">
                             <h1 class="text-2xl">
-                                12:45 Closing Ceremony
+                                12:50 Closing Ceremony
                             </h1>
                             <transition name="slide-fade">
                                 <p v-if="active.includes('section9')" class="text-xl text-gray-300 mt-3 text-justify">
